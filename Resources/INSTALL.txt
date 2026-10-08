@@ -1,0 +1,21 @@
+LorenVocabulary / IELTS 生词本
+================================
+
+安装：
+1. 将 IELTS-Vocab.app 拖到 Applications（应用程序）文件夹。
+2. 当前公开版本尚未经过 Apple 公证。首次启动请按住 Control 点击 App，选择“打开”，再确认一次。
+3. 按系统提示，在“系统设置 → 隐私与安全性 → 辅助功能”中允许 IELTS-Vocab。
+4. 如需 AI 回退，在应用左侧点击“API 设置”，填写自己的 DeepSeek API Key。密钥保存在 macOS 钥匙串中。
+
+说明：
+- App 无需 API Key 即可使用 macOS 系统词典查询常见词。
+- 公开安装包不包含任何开发者 API Key、个人学习数据或授权不明的完整词库。
+- 本项目与 IELTS、Apple、DeepSeek、Oxford University Press 等机构无隶属或背书关系。
+
+Installation:
+1. Drag IELTS-Vocab.app to Applications.
+2. This public build is not Apple-notarized yet. On first launch, Control-click the app, choose Open, then confirm.
+3. Grant Accessibility access when macOS asks.
+4. Optional: enter your own DeepSeek API key in API Settings. It is stored in macOS Keychain.
+
+Project: https://github.com/Loren2008/LorenVocabulary

@@ -15,6 +15,12 @@
 
 ## 简体中文
 
+### 下载与安装
+
+从 [GitHub Releases](https://github.com/Loren2008/LorenVocabulary/releases/latest) 下载通用版 `.dmg`，将 `IELTS-Vocab.app` 拖入 Applications。安装包同时支持 Apple Silicon 与 Intel Mac。
+
+当前公开构建尚未经过 Apple 公证，因此首次启动需按住 Control 点击 App，选择“打开”并确认；之后可以正常双击启动。首次划词时还需要按系统提示授予辅助功能权限。
+
 ### 功能
 
 - 在任意 App 中选中英文，双击 Control，在鼠标附近立即弹出解释。
@@ -119,6 +125,8 @@ CI 会在 GitHub 托管的 macOS runner 上运行同样的 Swift、Python 与 Sh
 ## English
 
 LorenVocabulary is a native SwiftUI/AppKit dictionary for macOS. Select English text in any application and double-tap Control to open a compact lookup panel. The main window adds richer search, saved words, pronunciation, and flashcard review.
+
+Download the universal `.dmg` from [GitHub Releases](https://github.com/Loren2008/LorenVocabulary/releases/latest) and drag the app to Applications. The current public build is not Apple-notarized, so the first launch requires Control-clicking the app and choosing Open.
 
 ### Quick start
 

@@ -2,6 +2,7 @@
 .build/
 build/
 DerivedData/
+dist/
 *.o
 *.dSYM/
 
