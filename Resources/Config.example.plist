@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>deepseekAPIKey</key>
+    <string>YOUR_DEEPSEEK_API_KEY</string>
+    <key>deepseekBaseURL</key>
+    <string>https://api.deepseek.com/v1</string>
+    <key>doubleTapInterval</key>
+    <real>0.4</real>
+</dict>
+</plist>

@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: Swift and pipeline tests
+    runs-on: macos-15
+    timeout-minutes: 20
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v7
+
+      - name: Show toolchain
+        run: |
+          swift --version
+          python3 --version
+
+      - name: Run Swift tests
+        run: swift test
+
+      - name: Run Python pipeline tests
+        run: python3 -m unittest discover -s Tests -p 'test_expansion_pipeline.py'
+
+      - name: Check shell syntax
+        run: bash -n build.sh setup_local_signing.sh BatchBuilder/build.sh
+
+      - name: Enforce public-repository hygiene
+        run: |
+          test ! -e Resources/Config.plist
+          test ! -e Resources/words.db
+          test ! -d BatchBuilder/generated
+          if git grep -nE 'sk-[A-Za-z0-9_-]{12,}|gh[pousr]_[A-Za-z0-9_]{20,}'; then
+            echo 'Credential-like value found in tracked files.' >&2
+            exit 1
+          fi

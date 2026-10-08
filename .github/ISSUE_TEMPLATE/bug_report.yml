@@ -1,0 +1,69 @@
+name: Bug report
+description: Report a reproducible problem in LorenVocabulary
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve LorenVocabulary. Remove API keys, selected text, clipboard contents, and personal dictionary data from logs and screenshots.
+  - type: input
+    id: version
+    attributes:
+      label: App version or commit
+      placeholder: v1.0.0 or commit SHA
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version and Mac model
+      placeholder: macOS 15.6, Apple Silicon
+    validations:
+      required: true
+  - type: dropdown
+    id: build
+    attributes:
+      label: Build method
+      options:
+        - bash build.sh
+        - swift run IELTS-Vocab
+        - Other source build
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open …
+        2. Select …
+        3. Double-tap Control …
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Sanitized logs or crash report
+      render: shell
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Safety check
+      options:
+        - label: I removed credentials and personal data from this report.
+          required: true
+        - label: I searched existing issues for the same problem.
+          required: true

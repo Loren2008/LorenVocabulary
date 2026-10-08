@@ -1,0 +1,61 @@
+# Swift / Xcode build products
+.build/
+build/
+DerivedData/
+*.o
+*.dSYM/
+
+# Local secrets and user data
+.env
+.env.*
+!.env.example
+Resources/Config.plist
+Resources/words.db
+Resources/words.db-*
+*.sqlite-wal
+*.sqlite-shm
+*.keychain-db
+*.pem
+*.p12
+
+# Generated dictionary artifacts and local QA output
+BatchBuilder/generated/
+Analysis/words_db_quality.ipynb
+Analysis/words_db_quality_summary.json
+
+# Locally compiled helper binaries
+BatchBuilder/batch-builder
+BatchBuilder/deepseek_full
+BatchBuilder/deepseek_import
+BatchBuilder/dictionary_validate
+BatchBuilder/find_failed
+BatchBuilder/migrate
+
+# Historical local-only implementation and handoff notes
+BatchBuilder/deepseek_batch.sh
+BatchBuilder/deepseek_full.swift
+BatchBuilder/deepseek_import.swift
+BatchBuilder/ds_batch_lookup.py
+BatchBuilder/ds_lookup.py
+BatchBuilder/find_failed.swift
+BatchBuilder/migrate.swift
+CODX_HANDOFF.md
+CONVERSATION_LOG.md
+PRD.md
+
+# Generated and superseded icon assets
+Resources/AppIcon.iconset/
+Resources/AppIcon-v2.iconset/
+Resources/AppIcon-legacy-*.iconset/
+Resources/AppIcon-legacy-*.icns
+Resources/AppIcon-v2.icns
+Resources/AppIcon-v2-master.png
+Resources/A_modern_macOS_style_app_icon__*.png
+
+# Python / editor / OS metadata
+__pycache__/
+*.py[cod]
+.venv/
+.vscode/
+.idea/
+.DS_Store

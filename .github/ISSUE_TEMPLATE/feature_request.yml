@@ -1,0 +1,35 @@
+name: Feature request
+description: Propose an improvement to LorenVocabulary
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What user problem should this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Describe the behavior, not only the implementation.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: textarea
+    id: data
+    attributes:
+      label: Data and licensing impact
+      description: List any new API, dataset, model, copyrighted content, or privacy impact.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Confirmation
+      options:
+        - label: This request does not include credentials, personal data, or unauthorized exam/dictionary content.
+          required: true
