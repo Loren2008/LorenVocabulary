@@ -109,7 +109,10 @@ if [ -n "$NOTARY_PROFILE" ]; then
 fi
 
 hdiutil verify "$OUTPUT_DMG"
-shasum -a 256 "$OUTPUT_DMG" > "$CHECKSUM_FILE"
+(
+    cd "$DIST_DIR"
+    shasum -a 256 "$(basename "$OUTPUT_DMG")"
+) > "$CHECKSUM_FILE"
 
 echo "Created: $OUTPUT_DMG"
 echo "Architectures: $ARCHS"
